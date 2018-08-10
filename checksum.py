@@ -1,3 +1,8 @@
+'''
+This code is released under MIT license
+'''
+
+
 def code_to_char(code):
     code_char_mapping_string="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"   
     return code_char_mapping_string[code] 
