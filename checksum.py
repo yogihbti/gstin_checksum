@@ -17,4 +17,7 @@ def calc_checksum_digit(input_string):
         checksum = checksum + (multiplier * char_to_code(single_char)) % 36 \
         + (multiplier * char_to_code(single_char)) // 36
         index=index+1
-    return code_to_char(36 - (checksum % 36))
+    if checksum % 36 == 0:
+        return code_to_char(0)
+    else:
+        return code_to_char(36 - (checksum % 36))
