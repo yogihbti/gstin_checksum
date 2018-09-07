@@ -23,3 +23,12 @@ def calc_checksum_digit(input_string):
         + (multiplier * char_to_code(single_char)) // 36
         index=index+1
         return code_to_char((36 - (checksum % 36)) % 36)
+ 
+
+def main(argv):
+    for arg in argv:
+        print(arg,"has checksum digit: ",calc_checksum_digit(arg)) 
+              
+if __name__ == "__main__":
+    import sys
+    main(sys.argv[1:])
